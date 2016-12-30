@@ -213,7 +213,8 @@ OnTick(function (myHero)
           end
         end 
         if CassiopeiaMenu.AutoMode.W:Value() then        
-          if Ready(_W) and ValidTarget(target,jhCastTargetSpell(target, _W)
+          if Ready(_W) and ValidTarget(target, 800) then 
+				CastTargetSpell(target, _W)
           end
         end
         if CassiopeiaMenu.AutoMode.E:Value() then        
