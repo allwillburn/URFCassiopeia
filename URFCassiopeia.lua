@@ -112,36 +112,29 @@ OnTick(function (myHero)
             if CassiopeiaMenu.Combo.Randuins:Value() and Randuins > 0 and Ready(Randuins) and ValidTarget(target, 500) then
 			CastSpell(Randuins)
             end
-
-           
             
+	     if CassiopeiaMenu.Combo.Gunblade:Value() and Gunblade > 0 and Ready(Gunblade) and ValidTarget(target, 700) then
+			           CastTargetSpell(target, Gunblade)
+            end
+           
+            if CassiopeiaMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 800) then
+			           CastSkillShot(_W, target)
+	          end
 
+	    if CassiopeiaMenu.Combo.R:Value() and Ready(_R) and ValidTarget(target, 825) and (EnemiesAround(myHeroPos(), 825) >= CassiopeiaMenu.Combo.RX:Value()) then
+			CastSkillShot(_R, target)
+				
+            end
+		
+	    if CassiopeiaMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 850) then
+		     if target ~= nil then 
+                         CastTargetSpell(target, _Q)
+                     end
+	    end	
             if CassiopeiaMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 700) then
 			 CastTargetSpell(target, _E)
 	    end
 
-            if CassiopeiaMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 850) then
-		     if target ~= nil then 
-                         CastTargetSpell(target, _Q)
-                     end
-            end
-
-            
-
-            if CassiopeiaMenu.Combo.Gunblade:Value() and Gunblade > 0 and Ready(Gunblade) and ValidTarget(target, 700) then
-			           CastTargetSpell(target, Gunblade)
-            end
-
-            
-
-	          if CassiopeiaMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 800) then
-			           CastSkillShot(_W, target)
-	          end
-	    
-	    
-            if CassiopeiaMenu.Combo.R:Value() and Ready(_R) and ValidTarget(target, 825) and (EnemiesAround(myHeroPos(), 825) >= CassiopeiaMenu.Combo.RX:Value()) then
-			CastSkillShot(_R, target)
-            end
 
           end
 
