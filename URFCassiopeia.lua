@@ -53,7 +53,6 @@ CassiopeiaMenu.AutoMode:Boolean("R", "Auto R", false)
 
 CassiopeiaMenu:SubMenu("LaneClear", "LaneClear")
 CassiopeiaMenu.LaneClear:Boolean("Q", "Use Q", true)
-CassiopeiaMenu.LaneClear:Boolean("W", "Use W", true)
 CassiopeiaMenu.LaneClear:Boolean("E", "Use E", true)
 
 
@@ -195,9 +194,7 @@ OnTick(function (myHero)
 	        	CastTargetSpell(closeminion, _Q)
                 end
 
-                if CassiopeiaMenu.LaneClear.W:Value() and Ready(_W) and ValidTarget(closeminion, 800) then
-	        	CastSkillShot(closeminion, _W)
-	        end
+               
 
                 if CassiopeiaMenu.LaneClear.E:Value() and Ready(_E) and ValidTarget(closeminion, 700) then
 	        	CastTargetSpell(target, _E)
