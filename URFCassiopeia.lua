@@ -102,7 +102,7 @@ OnTick(function (myHero)
             end
 
             if CassiopeiaMenu.Harass.W:Value() and Ready(_W) and ValidTarget(target, 800) then
-				CastTargetSpell(target, _W)
+				CastSkillShot(_W, target)
             end     
           end
 
@@ -136,7 +136,7 @@ OnTick(function (myHero)
             
 
 	          if CassiopeiaMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 800) then
-			            CastTargetSpell(target, _W)
+			           CastSkillShot(_W, target)
 	          end
 	    
 	    
@@ -196,7 +196,7 @@ OnTick(function (myHero)
                 end
 
                 if CassiopeiaMenu.LaneClear.W:Value() and Ready(_W) and ValidTarget(closeminion, 800) then
-	        	CastTargetSpell(closeminion, _W)
+	        	CastSkilShot(closeminion, _W)
 	        end
 
                 if CassiopeiaMenu.LaneClear.E:Value() and Ready(_E) and ValidTarget(closeminion, 700) then
