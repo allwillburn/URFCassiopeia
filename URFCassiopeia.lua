@@ -196,7 +196,7 @@ OnTick(function (myHero)
                 end
 
                 if CassiopeiaMenu.LaneClear.W:Value() and Ready(_W) and ValidTarget(closeminion, 800) then
-	        	CastSkilShot(closeminion, _W)
+	        	CastSkillShot(closeminion, _W)
 	        end
 
                 if CassiopeiaMenu.LaneClear.E:Value() and Ready(_E) and ValidTarget(closeminion, 700) then
