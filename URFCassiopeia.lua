@@ -118,7 +118,7 @@ OnTick(function (myHero)
             
 
             if CassiopeiaMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 700) then
-			 CastTargetSpell(_E, target)
+			 CastTargetSpell(target, _E)
 	    end
 
             if CassiopeiaMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 850) then
@@ -184,7 +184,7 @@ OnTick(function (myHero)
 			
 			
 		if IsReady(_E) and ValidTarget(enemy, 700) and CassiopeiaMenu.KillSteal.E:Value() and GetHP(enemy) < getdmg("E",enemy) then
-		                      CastTargetSpell(_E, target)
+		                      CastTargetSpell(target, _E)
   
                 end
       end
@@ -200,7 +200,7 @@ OnTick(function (myHero)
 	        end
 
                 if CassiopeiaMenu.LaneClear.E:Value() and Ready(_E) and ValidTarget(closeminion, 700) then
-	        	CastTargetSpell(closeminion, _E)
+	        	CastTargetSpell(target, _E)
 	        end
 
                
@@ -219,7 +219,7 @@ OnTick(function (myHero)
         end
         if CassiopeiaMenu.AutoMode.E:Value() then        
 	  if Ready(_E) and ValidTarget(target, 700) then
-		      CastTargetSpell(_E, target)
+		      CastTargetSpell(target, _E)
 	  end
         end
         if CassiopeiaMenu.AutoMode.R:Value() then        
